@@ -5,7 +5,7 @@ import java.util.List;
 public class BillGeneratorImpl implements BillGenerator{
     @Override
     public String generateBill(Pizza pizza) {
-        String bill = "Base Price of pizza: " + pizza.getBasePrice() + "\n";
+        String bill = "Base Price Of The Pizza: " + pizza.getBasePrice() + "\n";
         if(pizza.isCheeseAdded()) {
             bill += "Extra Cheese Added: " + pizza.getCheesePrice() + "\n";
         }
@@ -13,9 +13,9 @@ public class BillGeneratorImpl implements BillGenerator{
             bill += "Extra Toppings Added: " + pizza.getToppingPrice() + "\n";
         }
         if(pizza.isTakeAway()) {
-            bill += "Paperbag Added:" + pizza.getTakeAwayPrice() + "\n";
+            bill += "Paperbag Added: " + pizza.getTakeAwayPrice() + "\n";
         }
-        bill += "Final price : " + pizza.getPrice();
+        bill += "Total Price: " + pizza.getPrice();
         return bill;
     }
 }
