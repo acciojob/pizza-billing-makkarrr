@@ -15,7 +15,7 @@ public class BillGeneratorImpl implements BillGenerator{
         if(pizza.isTakeAway()) {
             bill += "Paperbag Added: " + pizza.getTakeAwayPrice() + "\n";
         }
-        bill += "Total Price: " + pizza.getPrice();
+        bill += "Total Price: " + pizza.getPrice() + "\n";
         return bill;
     }
 }
