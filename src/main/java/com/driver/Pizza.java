@@ -3,13 +3,14 @@ package com.driver;
 public class Pizza {
 
     //prices
-    static int nonVegPizzaBasePrice = 400;
-    static int vegPizzaBasePrice = 300;
+    protected int nonVegPizzaBasePrice = 400;
+    protected int vegPizzaBasePrice = 300;
+
+
 
     static int takeAwayPrice = 20;
     private int cheesePrice;
     private int toppingPrice;
-
 
     //flags
     private boolean isCheeseAdded;
@@ -43,6 +44,15 @@ public class Pizza {
         this.toppingsAdder = new ToppingAdderImpl();
         this.cheeseAdder = new CheeseAdderImpl();
         this.billGenerator = new BillGeneratorImpl();
+        this.price = getBasePrice();
+        // your code goes here
+    }
+
+    public Pizza(Boolean isVeg, BillGenerator billGenerator){
+        this.isVeg = isVeg;
+        this.toppingsAdder = new ToppingAdderImpl();
+        this.cheeseAdder = new CheeseAdderImpl();
+        this.billGenerator = billGenerator;
         this.price = getBasePrice();
         // your code goes here
     }
