@@ -43,6 +43,7 @@ public class Pizza {
         this.toppingsAdder = new ToppingAdderImpl();
         this.cheeseAdder = new CheeseAdderImpl();
         this.billGenerator = new BillGeneratorImpl();
+        this.price = getBasePrice();
         // your code goes here
     }
 
